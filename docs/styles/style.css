@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'baijamjuree-medium';
+    src: url('../assets/BaiJamjuree-Medium.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'baijamjuree-bold';
+    src: url('../assets/BaiJamjuree-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+body {
+    color: #ffffff;
+    background-color: #000000;
+    margin: 0;
+    padding: 0px;
+}
+h1 {
+    font-family: 'baijamjuree-bold';
+    color: #565656;
+    text-shadow: #343434;
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    font-family: 'baijamjuree-bold';
+    color: #999999;
+    text-align: center;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #000000;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0px auto;
+    z-index: 1000;
+}
+.image-container {
+    position: relative;
+    width: 800px; /* Fixed "design size" */
+    margin: 0 auto;
+    transform: scale(var(--scale));
+    transform-origin: top center;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.toptabs {
+    position: absolute;
+    top: 67px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 0.03rem;
+    display: flex;
+    z-index: 1000;
+}
+
+.toptabs a {
+    color: rgb(178, 178, 178);
+    font-family: "baijamjuree-medium";
+    padding: 0.1rem .24rem;
+    font-size: 8.3px;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.toptabs a:hover {
+    transform: scale(1.05);
+    color: white;
+    text-shadow: 0 0 12px white;
+
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+:root {
+    --scale: 2;
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --scale: 0.9;
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        --scale: 0.45;
+    }
+}
+
+@media (max-width: 100px) {
+    :root {
+        --scale: 0.3;
+    }
+}
+
+.video-container {
+    position: absolute;
+    top: 190px;
+    left: -50%;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    display: inline-table;
+}
+
+.toptabs a.active {
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
